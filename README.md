@@ -99,6 +99,18 @@ NudgeBot currently supports the following slash commands.
 - Retrieves the active courses associated with the linked Canvas account.  
   
 - The bot displays the course names along with the course ID in an ephemeral message, which means the message is only visible to the user who invoked the command. 
+
+### `/assignments`
+
+- Retrieves upcoming assignments from the user's linked Canvas acccount.
+
+- Users can specify the number of days ahead to view assignments, with the default set to 7 days.
+
+- Users can also filter assignments by a specific course using the optional course parameter.
+
+- The bot displays the assignment name, course, due date, time remaining, and a link to the assignment on Canvas.
+
+- The assignments are organized by their due dates, with the earliest deadlines shown first. Results are displayed in an ephemeral message, meaning only the user who invoked the command can see them.
   
 Additional commands will be documented here as they are implemented.
 
