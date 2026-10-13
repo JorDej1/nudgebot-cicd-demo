@@ -1,0 +1,8 @@
+[Unit]
+Description=Deploy NudgeBot from GitHub
+
+[Service]
+Type=oneshot
+User=dietpi
+WorkingDirectory=/home/dietpi/nudgebot
+ExecStart=/home/dietpi/nudgebot/deploy/deploy.sh

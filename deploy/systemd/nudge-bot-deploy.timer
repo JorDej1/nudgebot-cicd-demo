@@ -1,0 +1,10 @@
+[Unit]
+Description=Poll GitHub for NudgeBot updates
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=2min
+Unit=nudge-bot-deploy.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,16 @@
+[Unit]
+Description=Nudge Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=dietpi
+WorkingDirectory=/home/dietpi/nudgebot
+EnvironmentFile=/home/dietpi/nudgebot/.env
+ExecStart=/home/dietpi/nudgebot/.venv/bin/python main.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
