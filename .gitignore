@@ -9,3 +9,5 @@
 
 # encryption keys!
 *.key
+__pycache__/
+test_key
