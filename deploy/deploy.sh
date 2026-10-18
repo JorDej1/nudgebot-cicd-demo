@@ -2,7 +2,7 @@
 
 set -e
 
-APP_DIR="/home/dietpi/nudgebot"
+APP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 VENV="$APP_DIR/.venv"
 BRANCH="main"
 
@@ -28,7 +28,7 @@ git pull --ff-only origin "$BRANCH"
 
 echo "Installing dependencies..."
 
-"$VENV/bin/python" install -r "$APP_DIR/requirements.txt"
+"$VENV/bin/python" -m pip install -r "$APP_DIR/requirements.txt"
 
 echo "Restarting NudgeBot..."
 
